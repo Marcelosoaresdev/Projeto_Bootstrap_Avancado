@@ -17,18 +17,23 @@
       text-decoration: none;
       color: #ffffff;
     }
+
+    a {
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="#">
+    <div class="container d-flex align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
         <img
-          src="https://pixabay.com/get/g022b049fad3cbbc2361c68ca8049c33ab39c4537401a06b8ef27b0c426c69f75393c36b3ff8926609d3e9cbc09973f61bc799ba7c669555269fb437d6e05c0018f9bd43e0c329477e7b666d697144222_640.png"
-          width="30"
-          height="30"
+          src="/img/applelogo.png"
+          width="35"
+          height="35"
           alt="Logo Apple"
         />
+        <h5 class="mb-0 ms-2">Apple Inc.</h5>
       </a>
       <button
         class="navbar-toggler"
@@ -39,11 +44,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navtoggler">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ajuda</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
               Nossos Dispositivos
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="navbarDropdown">
               <li>
                 <a class="dropdown-item" href="#">Iphone</a>
               </li>
@@ -54,12 +65,6 @@
                 <a class="dropdown-item" href="#">MacIOS</a>
               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ajuda</a>
           </li>
         </ul>
       </div>
