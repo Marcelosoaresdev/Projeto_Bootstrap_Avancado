@@ -24,11 +24,13 @@
           <h5 class="mb-0 ms-2">Apple Inc.</h5>
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler collapsed"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navtoggler">
-          <span class="navbar-toggler-icon"></span>
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
         </button>
         <div class="collapse navbar-collapse" id="navtoggler">
           <ul class="navbar-nav ms-auto">
@@ -84,12 +86,12 @@
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselAutoplay" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselAutoplay" data-bs-slide="next">
+      <button id="iphones" class="carousel-control-next" type="button" data-bs-target="#carouselAutoplay" data-bs-slide="next">
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
   </div>
-  <section id="iphones">
+  <section>
     <div class="container" >
       <h1>iPhones</h1>
       <div class="row">
@@ -124,5 +126,20 @@
     </div>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let dropdownItems = document.querySelectorAll('.dropdown-item');
+      let navbarToggler = document.querySelector('.navbar-toggler');
+      let navbarCollapse = document.querySelector('#navtoggler');
+      
+      dropdownItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+          if (!navbarToggler.classList.contains('collapsed')) {
+            navbarToggler.click();
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
