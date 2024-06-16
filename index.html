@@ -186,23 +186,23 @@
     document.addEventListener('DOMContentLoaded', function () {
       let dropdownItems = document.querySelectorAll('.dropdown-item');
       let navbarToggler = document.querySelector('.navbar-toggler');
-      let navbarCollapse = document.querySelector('#navtoggler');
-      let navItems = document.querySelectorAll('.nav-item');
-
+  
       dropdownItems.forEach(function (item) {
-        item.addEventListener('click', function () {
+        item.addEventListener('click', function (event) {
+          event.stopPropagation(); // Impede que o evento se propague para fechar o dropdown
           if (!navbarToggler.classList.contains('collapsed')) {
-            navbarToggler.click();
+            navbarToggler.click(); // Fecha o menu se estiver aberto
           }
         });
       });
-
-      navItems.forEach(function (item) {
-        item.addEventListener('click', function () {
+  
+      // Fechar o menu se clicar em qualquer lugar fora do dropdown
+      document.addEventListener('click', function (event) {
+        if (!event.target.closest('.dropdown')) {
           if (!navbarToggler.classList.contains('collapsed')) {
-            navbarToggler.click();
+            navbarToggler.click(); // Fecha o menu se estiver aberto
           }
-        });
+        }
       });
     });
   </script>
