@@ -124,5 +124,9 @@ h1 {
 }
 
 #lastItem {
-  margin-bottom: 1em;
+  margin-bottom: 1.7em;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
 }
