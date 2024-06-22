@@ -10,7 +10,7 @@ header {
   }
 
 .navbar {
-  background-color: #e3e3e3;
+  background-color: #fff;
 }
 
 .carousel-inner{
@@ -130,3 +130,8 @@ h1 {
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
 }
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
